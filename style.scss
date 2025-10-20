@@ -22,12 +22,15 @@
   src: url(./public/fonts/TK3iWkUHHAIjg752GT8Gl-1PKw.woff2);
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: f4;
 }
+
+
 html,
 body {
   height: 100%;
@@ -36,23 +39,41 @@ body {
 
 html {
   font-size: clamp(14px, 1vw, 18px);
+  scroll-behavior: smooth;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-main {
+body {
+   font-family: f4;
+  background-color: #ffffff;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+main{
   width: 100%;
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
+
+
+
+main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 3.5rem 2rem;
   gap: 2rem;
 
   #view-1 {
     width: 100%;
-    padding: 3.5rem 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
     align-items: center;
+    gap: 1.5rem;
 
     > h1 {
       display: flex;
@@ -71,22 +92,22 @@ main {
       font-size: 1.6rem;
       text-align: center;
       color: rgba(0, 0, 0, 0.945);
-      font-weight: 500;
     }
 
-    #buttons {
+    #view-1-buttons {
       width: 100%;
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
-      > button.btn1 {
-        background-color: transparent;
-        border: 1px solid rgba(0, 0, 0, 0.774);
-        width: 100%;
+
+      >#view-1-buttons-btn1,>#view-1-buttons-btn2 {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-grow: 1;
         padding: 0.5rem 0;
+        background-color: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.774);
         border-radius: 5px;
         font-size: 1.3rem;
 
@@ -97,28 +118,19 @@ main {
         }
       }
 
-      > button.btn2 {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      > #view-1-buttons-btn2 {
 
         padding: 1.4rem 0;
         background-color: #a034f6;
         border: none;
         color: white;
-        font-size: 1.3rem;
-        border-radius: 5px;
         > span {
-          font-family: f2;
-          letter-spacing: -1px;
+          opacity: 1;
         }
       }
     }
 
     > video {
-      width: 100%;
-
       border-radius: 10px;
       width: 100%;
     }
@@ -131,7 +143,6 @@ main {
     align-items: center;
     gap: 2rem;
     flex-wrap: nowrap;
-    padding: 3.5rem 2rem;
 
     > h2 {
       font-size: 2.6rem;
@@ -184,20 +195,19 @@ main {
       }
     }
   }
-  
 
-  #view-3{
+  #view-3 {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: center;
-    padding: 3.5rem 2rem;
-    >span{
-      color: #A035F6;
+
+    > span {
+      color: #a035f6;
       font-size: 1.3rem;
       font-family: f1;
     }
-    >h1{
+    > h1 {
       font-family: f3;
       text-align: center;
       font-size: 2.9rem;
@@ -205,73 +215,64 @@ main {
     }
   }
 
+  #view-4 {
+    width: 100%;
 
-    #view-4{
+    #view-4-section {
       width: 100%;
-      padding: 3.5rem 2rem;
-      
-
-      #view-4-section{
-        width: 100%;
-      background-color: #D7D7D7;
+      background-color: #d7d7d7;
       border-radius: 20px;
       padding: 2rem;
       display: flex;
       flex-direction: column;
       gap: 6rem;
       overflow: hidden;
-     
 
-      #view-4-top{
+      #view-4-top {
         display: flex;
         flex-direction: column;
         gap: 1rem;
 
-        >span{
+        > span {
           font-family: f1;
           color: #8707f0;
           font-size: 1.3rem;
         }
 
-        >h2{
+        > h2 {
           font-size: 3.1rem;
           font-family: f3;
           line-height: 1.1;
         }
-        >p{
+        > p {
           font-size: 1.5rem;
           line-height: 1.6;
         }
 
-        #view-4-top-icons{
+        #view-4-top-icons {
           display: flex;
           gap: 1rem;
 
-          >img{
+          > img {
             width: 2.3rem;
           }
         }
-       
-        
       }
-       
-      #view-4-bottom{
-        
-        >img{
+
+      #view-4-bottom {
+        > img {
           width: 100%;
           max-width: 400px;
           scale: 1.2;
         }
       }
-
-      }
-      
-    
-
     }
-
-
+  }
 }
+
+
+
+
 
 
 
@@ -281,29 +282,37 @@ main {
     font-size: clamp(14px, 1.3vw, 18px);
   }
 
-  main {
+   main {
+
+    
+    
     #view-1 {
       gap: 2rem;
+
       > p {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
+        width: 80%;
       }
 
-      #buttons {
+      #view-1-buttons{
         flex-direction: row;
-        width: 70%;
         justify-content: center;
-        > button.btn1,
-        > button.btn2 {
-          font-size: 1rem;
-          padding: 0.1rem 0;
-          max-width: 200px;
+          
+          #view-1-buttons-btn1,#view-1-buttons-btn2{
+            flex-grow: 0;
+            padding: 0.05rem 2rem;
+            >span{
+              font-size: 1rem;
+            }
+
+           }
         }
-      }
 
       > video {
-        max-width: 650px;
+        max-width: 600px;
       }
     }
+    
 
     #view-2 {
       > h2 {
@@ -317,9 +326,7 @@ main {
         align-items: stretch;
         gap: 2rem;
 
-
-
-        overflow-x: auto;      /* ✅ horizontal scroll */
+        overflow-x: auto; /* ✅ horizontal scroll */
         scroll-snap-type: x mandatory; /* ✅ smooth snap while scrolling */
         -webkit-overflow-scrolling: touch;
         padding-bottom: 1rem;
@@ -327,49 +334,42 @@ main {
         #card1,
         #card2,
         #card3 {
-         flex: 0 0 80%;          /* ✅ each card takes 75% width */
-        scroll-snap-align: center; /* ✅ aligns card nicely while scrolling */
-        border-radius: 10px;
-        max-width: 400px; 
-        >h2{
-          font-size: 1.4rem;
-        }
-        >p{
-          font-size:1rem ;
-        }
+          flex: 0 0 80%; /* ✅ each card takes 75% width */
+          scroll-snap-align: center; /* ✅ aligns card nicely while scrolling */
+          border-radius: 10px;
+          max-width: 400px;
+          > h2 {
+            font-size: 1.4rem;
+          }
+          > p {
+            font-size: 1rem;
+          }
         }
       }
-
     }
 
-    #view-3{
-
-      >span{
+    #view-3 {
+      > span {
         font-size: 1rem;
       }
-      >h1{
+      > h1 {
         font-size: 2.6rem;
       }
     }
 
-
-    #view-4{
-      #view-4-section{
+    #view-4 {
+      #view-4-section {
         position: relative;
-         #view-4-bottom{
+        #view-4-bottom {
           width: 100%;
           display: flex;
           justify-content: flex-end;
-          >img{
-            
+          > img {
             max-width: 600px;
           }
-         }
+        }
       }
     }
-
-  
-
   }
 }
 
@@ -378,27 +378,27 @@ main {
 
 
 
+
+
+
+
+
+
 @media (min-width: 1024px) {
+   html {
+    font-size: clamp(14px, 2vw, 18px);
+  }
   main {
     max-width: 1990px;
     margin: auto;
+
     #view-1 {
       > p {
         font-size: 1.2rem;
       }
 
-      #buttons {
-        justify-content: center;
-        > button.btn1,
-        > button.btn2 {
-          padding: 0.2rem 0;
-          max-width: 250px;
-          font-size: 1rem;
-        }
-      }
-
       > video {
-        max-width: 900px;
+        max-width: 800px;
       }
     }
 
@@ -409,49 +409,43 @@ main {
       }
 
       #cards {
-         width: 100%;
+        width: 100%;
         display: flex;
-        justify-content: center;  /* ✅ centers all cards together */
+        justify-content: center; /* ✅ centers all cards together */
         align-items: stretch;
         flex-wrap: nowrap;
         gap: 2rem;
-        overflow: hidden;         /* ✅ removes scroll */
+        overflow: hidden; /* ✅ removes scroll */
         padding: 2rem 0;
         max-height: 35rem;
-  
-        
+
         #card1,
         #card2,
         #card3 {
-            
-            flex: 0 0 30%;            /* ✅ each card takes 30% of container */
-            background-position: center;
-            
-            
+          flex: 0 0 30%; /* ✅ each card takes 30% of container */
+          background-position: center;
         }
       }
     }
 
-    #view-3{
-      h1{
+    #view-3 {
+      h1 {
         max-width: 900px;
       }
     }
 
-   
-    #view-4{
-      #view-4-section{
+    #view-4 {
+      #view-4-section {
         max-width: 1300px;
         margin: auto;
         flex-direction: row;
 
-        #view-4-top{
-          >p{
+        #view-4-top {
+          > p {
             max-width: 1000px;
             font-size: 1.2rem;
           }
         }
-        
       }
     }
 
