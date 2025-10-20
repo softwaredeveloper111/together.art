@@ -266,6 +266,114 @@ main {
       }
     }
 
+  #view-5{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+   #view-5-top{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      white-space: nowrap;
+      
+      >h1{
+        font-size: 2.3rem;
+        font-family: f3;
+        line-height: 1;
+        
+      }
+
+    }
+     
+    #view-5-bottom{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows:repeat(9,250px) ;
+      grid-gap: 1.5rem;
+
+      .view-5-bottom-container{
+        border-radius: 16px;
+        overflow: hidden;
+        padding: 1rem 2rem;
+
+        >h2{
+          font-family: f1;
+          font-size: 2rem;
+        }
+
+      }
+
+      .one{
+        background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b12db77572a7419eba_Card%20Presale%20Benefits.webp");
+        background-size: cover;
+        background-position: center;
+        
+      }
+      .two{
+         background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b14638042dae2d64f2_Card%20Presale%20Benefits-1.webp");
+        background-size: cover;
+        background-position: center;
+        
+      }
+      
+       .three{
+        background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b1321c40a7d203630f_Card%20Presale%20Benefits-2.webp");
+        background-size: cover;
+        background-position: center;
+        
+       }
+
+       .four{
+        background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b0de35e6f50066b069_Card%20Presale%20Benefits-3.webp");
+        background-size: cover;
+        background-position: center;
+        
+       }
+
+       .five{
+        background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b192e1bd403199f9b0_Card%20Presale%20Benefits-4.webp");
+        background-size: cover;
+        background-position: center;
+        
+       }
+
+       .six{
+        background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b1bce6e7892dfeb5b9_Card%20Presale%20Benefits-5.webp");
+        background-size: cover;
+        background-position: center;
+        
+       }
+
+       .seven{
+        background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b17509c8cb43b7c001_Card%20Presale%20Benefits-6.webp");
+        background-size: cover;
+        background-position: center;
+        
+       }
+
+       .eight{
+        background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b189cca18d71e05f24_Card%20Presale%20Benefits-7.webp");
+       background-size: cover;
+        background-position: center;
+        
+       }
+
+       .nine{
+        background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b1f109d76060c47f61_Card%20Presale%20Benefits-8.webp");
+        background-size: cover;
+        background-position: center;
+        
+       }
+     
+
+
+    }
+
+  }
+
 
 
 }
@@ -372,6 +480,40 @@ main {
           }
         }
       }
+
+    #view-5{
+      #view-5-bottom{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 500px 250px 250px 250px 250px;
+       grid-template-areas: "one one"
+                            "two three"
+                            "four five"
+                            "six seven"
+                            "eight nine";
+
+        .view-5-bottom-container{
+          h2{
+            font-size: 1.3rem;
+          }
+        }
+
+        .one{grid-area: one;}
+        .two{grid-area: two;}
+        .three{grid-area: three;}
+        .four{grid-area: four;}
+        .five{grid-area: five;}
+        .six{grid-area: six;}
+        .seven{grid-area: seven;}
+        .eight{grid-area: eight;}
+        .nine{grid-area: nine;}
+
+      }
+    }
+
+
+    
+
+
     }
   }
 
@@ -394,6 +536,7 @@ main {
   main {
     max-width: 1990px;
     margin: auto;
+    width: 70%;
 
     #view-1 {
       > p {
@@ -451,6 +594,26 @@ main {
           }
         }
       }
+
+    #view-5{
+      #view-5-bottom{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 270px 270px 270px;
+        grid-template-areas: "one one two three"
+                             "one one four five"
+                             "six seven eight nine";
+
+       .one{grid-area: one;}
+        .two{grid-area: two;}
+        .three{grid-area: three;}
+        .four{grid-area: four;}
+        .five{grid-area: five;}
+        .six{grid-area: six;}
+        .seven{grid-area: seven;}
+        .eight{grid-area: eight;}
+        .nine{grid-area: nine;}
+      }
+    }
 
 
 
