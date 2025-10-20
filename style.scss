@@ -1,0 +1,460 @@
+@font-face {
+  font-family: f1;
+  src: url(./public/fonts/656b86fa3fe3596cc68938b1_TTCommonsProBold.woff2);
+}
+
+@font-face {
+  font-family: f2;
+  src: url(./public/fonts/656b86ff823e1e81ea66c6b5_TTCommonsProDemiBold.woff2);
+}
+
+@font-face {
+  font-family: f3;
+  src: url(./public/fonts/656b8703110c47fed1502536_TTCommonsProExtraBold.woff2);
+}
+
+@font-face {
+  font-family: f4;
+  src: url(./public/fonts/656b870b0129678b31d2ba06_TTCommonsProRegular.woff2);
+}
+@font-face {
+  font-family: f5;
+  src: url(./public/fonts/TK3iWkUHHAIjg752GT8Gl-1PKw.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: f4;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: clamp(14px, 1vw, 18px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  #view-1 {
+    width: 100%;
+    padding: 3.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+
+    > h1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 0.9;
+
+      > span {
+        font-size: 5rem;
+        font-family: f3;
+        white-space: nowrap;
+      }
+    }
+
+    > p {
+      font-size: 1.6rem;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.945);
+      font-weight: 500;
+    }
+
+    #buttons {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      > button.btn1 {
+        background-color: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.774);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 0;
+        border-radius: 5px;
+        font-size: 1.3rem;
+
+        > span {
+          font-family: f2;
+          letter-spacing: -1px;
+          opacity: 0.8;
+        }
+      }
+
+      > button.btn2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 1.4rem 0;
+        background-color: #a034f6;
+        border: none;
+        color: white;
+        font-size: 1.3rem;
+        border-radius: 5px;
+        > span {
+          font-family: f2;
+          letter-spacing: -1px;
+        }
+      }
+    }
+
+    > video {
+      width: 100%;
+
+      border-radius: 10px;
+      width: 100%;
+    }
+  }
+
+  #view-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    padding: 3.5rem 2rem;
+
+    > h2 {
+      font-size: 2.6rem;
+      line-height: 1;
+      > span {
+        font-weight: 900;
+        font-family: f3;
+      }
+    }
+
+    #cards {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: center;
+
+      #card1,
+      #card2,
+      #card3 {
+        width: 100%;
+        min-height: 40rem;
+        border-radius: 10px;
+        padding: 2rem;
+        background-image: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c915a4bf7b6f26de86f7ef_pink-Background.webp");
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        > h2 {
+          font-size: 1.79rem;
+          font-family: f1;
+          display: flex;
+          gap: 0.4rem;
+          align-items: center;
+        }
+
+        > p {
+          font-size: 1.3rem;
+        }
+      }
+
+      #card2 {
+        background-image: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c7c1e4d9f74852725ad840_Cards%20%20--lummi.webp");
+      }
+
+      #card3 {
+        background-image: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c915a4215b22ddf3222ef2_dude_Background.webp");
+      }
+    }
+  }
+  
+
+  #view-3{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding: 3.5rem 2rem;
+    >span{
+      color: #A035F6;
+      font-size: 1.3rem;
+      font-family: f1;
+    }
+    >h1{
+      font-family: f3;
+      text-align: center;
+      font-size: 2.9rem;
+      line-height: 1.1;
+    }
+  }
+
+
+    #view-4{
+      width: 100%;
+      padding: 3.5rem 2rem;
+      
+
+      #view-4-section{
+        width: 100%;
+      background-color: #D7D7D7;
+      border-radius: 20px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 6rem;
+      overflow: hidden;
+     
+
+      #view-4-top{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        >span{
+          font-family: f1;
+          color: #8707f0;
+          font-size: 1.3rem;
+        }
+
+        >h2{
+          font-size: 3.1rem;
+          font-family: f3;
+          line-height: 1.1;
+        }
+        >p{
+          font-size: 1.5rem;
+          line-height: 1.6;
+        }
+
+        #view-4-top-icons{
+          display: flex;
+          gap: 1rem;
+
+          >img{
+            width: 2.3rem;
+          }
+        }
+       
+        
+      }
+       
+      #view-4-bottom{
+        
+        >img{
+          width: 100%;
+          max-width: 400px;
+          scale: 1.2;
+        }
+      }
+
+      }
+      
+    
+
+    }
+
+
+}
+
+
+
+
+@media (min-width: 480px) {
+  html {
+    font-size: clamp(14px, 1.3vw, 18px);
+  }
+
+  main {
+    #view-1 {
+      gap: 2rem;
+      > p {
+        font-size: 1.1rem;
+      }
+
+      #buttons {
+        flex-direction: row;
+        width: 70%;
+        justify-content: center;
+        > button.btn1,
+        > button.btn2 {
+          font-size: 1rem;
+          padding: 0.1rem 0;
+          max-width: 200px;
+        }
+      }
+
+      > video {
+        max-width: 650px;
+      }
+    }
+
+    #view-2 {
+      > h2 {
+        font-size: 3rem;
+      }
+
+      #cards {
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 2rem;
+
+
+
+        overflow-x: auto;      /* ✅ horizontal scroll */
+        scroll-snap-type: x mandatory; /* ✅ smooth snap while scrolling */
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 1rem;
+
+        #card1,
+        #card2,
+        #card3 {
+         flex: 0 0 80%;          /* ✅ each card takes 75% width */
+        scroll-snap-align: center; /* ✅ aligns card nicely while scrolling */
+        border-radius: 10px;
+        max-width: 400px; 
+        >h2{
+          font-size: 1.4rem;
+        }
+        >p{
+          font-size:1rem ;
+        }
+        }
+      }
+
+    }
+
+    #view-3{
+
+      >span{
+        font-size: 1rem;
+      }
+      >h1{
+        font-size: 2.6rem;
+      }
+    }
+
+
+    #view-4{
+      #view-4-section{
+        position: relative;
+         #view-4-bottom{
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          >img{
+            
+            max-width: 600px;
+          }
+         }
+      }
+    }
+
+  
+
+  }
+}
+
+
+
+
+
+
+@media (min-width: 1024px) {
+  main {
+    max-width: 1990px;
+    margin: auto;
+    #view-1 {
+      > p {
+        font-size: 1.2rem;
+      }
+
+      #buttons {
+        justify-content: center;
+        > button.btn1,
+        > button.btn2 {
+          padding: 0.2rem 0;
+          max-width: 250px;
+          font-size: 1rem;
+        }
+      }
+
+      > video {
+        max-width: 900px;
+      }
+    }
+
+    #view-2 {
+      > h2 {
+        font-size: 2.5rem;
+        max-width: 1000px;
+      }
+
+      #cards {
+         width: 100%;
+        display: flex;
+        justify-content: center;  /* ✅ centers all cards together */
+        align-items: stretch;
+        flex-wrap: nowrap;
+        gap: 2rem;
+        overflow: hidden;         /* ✅ removes scroll */
+        padding: 2rem 0;
+        max-height: 35rem;
+  
+        
+        #card1,
+        #card2,
+        #card3 {
+            
+            flex: 0 0 30%;            /* ✅ each card takes 30% of container */
+            background-position: center;
+            
+            
+        }
+      }
+    }
+
+    #view-3{
+      h1{
+        max-width: 900px;
+      }
+    }
+
+   
+    #view-4{
+      #view-4-section{
+        max-width: 1300px;
+        margin: auto;
+        flex-direction: row;
+
+        #view-4-top{
+          >p{
+            max-width: 1000px;
+            font-size: 1.2rem;
+          }
+        }
+        
+      }
+    }
+
+
+  }
+}
