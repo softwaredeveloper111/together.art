@@ -30,7 +30,6 @@
   box-sizing: border-box;
 }
 
-
 html,
 body {
   height: 100%;
@@ -45,23 +44,18 @@ html {
 }
 
 body {
-   font-family: f4;
+  font-family: f4;
   background-color: #ffffff;
   color: #222;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
-main{
-  width: 100%;
-  max-width: 1900px;
-  margin: 0 auto;
-}
-
-
-
 
 main {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1900px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,7 +94,8 @@ main {
       flex-direction: column;
       gap: 1.5rem;
 
-      >#view-1-buttons-btn1,>#view-1-buttons-btn2 {
+      > #view-1-buttons-btn1,
+      > #view-1-buttons-btn2 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -119,7 +114,6 @@ main {
       }
 
       > #view-1-buttons-btn2 {
-
         padding: 1.4rem 0;
         background-color: #a034f6;
         border: none;
@@ -147,7 +141,6 @@ main {
       font-size: 2.6rem;
       line-height: 1;
       > span {
-
         font-family: f1;
       }
     }
@@ -215,165 +208,474 @@ main {
   }
 
   #view-4 {
-  
-      width: 100%;
-      background-color: #d7d7d7;
-      border-radius: 20px;
-      padding: 2rem;
+    width: 100%;
+    background-color: #d7d7d7;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    overflow: hidden;
+
+    #view-4-top {
       display: flex;
       flex-direction: column;
-      gap: 6rem;
-      overflow: hidden;
+      gap: 1rem;
 
-      #view-4-top {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-
-        > span {
-          font-family: f1;
-          color: #8707f0;
-          font-size: 1.3rem;
-        }
-
-        > h2 {
-          font-size: 3.1rem;
-          font-family: f3;
-          line-height: 1.1;
-        }
-        > p {
-          font-size: 1.5rem;
-          line-height: 1.6;
-        }
-
-        #view-4-top-icons {
-          display: flex;
-          gap: 1rem;
-
-          > img {
-            width: 2.3rem;
-          }
-        }
+      > span {
+        font-family: f1;
+        color: #8707f0;
+        font-size: 1.3rem;
       }
 
-      #view-4-bottom {
+      > h2 {
+        font-size: 3.1rem;
+        font-family: f3;
+        line-height: 1.1;
+      }
+      > p {
+        font-size: 1.5rem;
+        line-height: 1.6;
+      }
+
+      #view-4-top-icons {
+        display: flex;
+        gap: 1rem;
+
         > img {
-          width: 100%;
-          max-width: 400px;
-          scale: 1.2;
-          object-fit: cover;
+          width: 2.3rem;
         }
       }
     }
 
-  #view-5{
+    #view-4-bottom {
+      > img {
+        width: 100%;
+        max-width: 400px;
+        scale: 1.2;
+        object-fit: cover;
+      }
+    }
+  }
+
+  #view-5 {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
 
-   #view-5-top{
+    #view-5-top {
       display: flex;
       align-items: center;
       gap: 1rem;
       white-space: nowrap;
-      
-      >h1{
+
+      > h1 {
         font-size: 2.3rem;
         font-family: f3;
         line-height: 1;
-        
       }
-
     }
-     
-    #view-5-bottom{
+
+    #view-5-bottom {
       width: 100%;
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows:repeat(9,250px) ;
+      grid-template-rows: repeat(9, 250px);
       grid-gap: 1.5rem;
 
-      .view-5-bottom-container{
+      .view-5-bottom-container {
         border-radius: 16px;
         overflow: hidden;
         padding: 1rem 2rem;
 
-        >h2{
+        > h2 {
           font-family: f1;
           font-size: 2rem;
         }
-
       }
 
-      .one{
+      .one {
         background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b12db77572a7419eba_Card%20Presale%20Benefits.webp");
         background-size: cover;
         background-position: center;
-        
       }
-      .two{
-         background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b14638042dae2d64f2_Card%20Presale%20Benefits-1.webp");
+      .two {
+        background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b14638042dae2d64f2_Card%20Presale%20Benefits-1.webp");
         background-size: cover;
         background-position: center;
-        
       }
-      
-       .three{
+
+      .three {
         background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b1321c40a7d203630f_Card%20Presale%20Benefits-2.webp");
         background-size: cover;
         background-position: center;
-        
-       }
+      }
 
-       .four{
+      .four {
         background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b0de35e6f50066b069_Card%20Presale%20Benefits-3.webp");
         background-size: cover;
         background-position: center;
-        
-       }
+      }
 
-       .five{
+      .five {
         background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b192e1bd403199f9b0_Card%20Presale%20Benefits-4.webp");
         background-size: cover;
         background-position: center;
-        
-       }
+      }
 
-       .six{
+      .six {
         background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b1bce6e7892dfeb5b9_Card%20Presale%20Benefits-5.webp");
         background-size: cover;
         background-position: center;
-        
-       }
+      }
 
-       .seven{
+      .seven {
         background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b17509c8cb43b7c001_Card%20Presale%20Benefits-6.webp");
         background-size: cover;
         background-position: center;
-        
-       }
+      }
 
-       .eight{
+      .eight {
         background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b189cca18d71e05f24_Card%20Presale%20Benefits-7.webp");
-       background-size: cover;
+        background-size: cover;
         background-position: center;
-        
-       }
+      }
 
-       .nine{
+      .nine {
         background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c797b1f109d76060c47f61_Card%20Presale%20Benefits-8.webp");
         background-size: cover;
         background-position: center;
-        
-       }
-     
+      }
+    }
+  }
 
+  #view-6 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    #view-6-top {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      > h1 {
+        font-family: f1;
+        font-size: 2.5rem;
+      }
+
+      #view-6-top-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .ana {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+
+          .ana-one,
+          .ana-two {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            > h2 {
+              font-size: 1.6rem;
+              font-family: f1;
+            }
+            > p {
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+
+    #view-6-bottom {
+      width: 100%;
+      background-image: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c799a789cca18d71e16467_Benefits%20Photo.webp");
+      background-position: center;
+      background-size: cover;
+      min-height: 30rem;
+      max-height: 616px;
+      border-radius: 10px;
+      overflow: hidden;
+
+      > img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  #view-7 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    #view-7-upper{
+       width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(14, auto);
+    grid-gap: 1rem;
+
+    .view-7-child {
+      overflow: hidden;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1.5rem;
+
+      > img {
+        width: 7rem;
+        height: 6rem;
+        border-radius: 10px;
+        object-position: center;
+        object-fit: cover;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        > p {
+          font-size: 1.2rem;
+          line-height: 1.5;
+        }
+
+        > span {
+          font-family: f3;
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    #view-7-div1 {
+      background-color: #96d470;
+    }
+    #view-7-div2 {
+      background-color: #f2ee8f;
+    }
+    #view-7-div3 {
+      background-color: #dcadf9;
+    }
+
+    #view-7-div4 {
+      background-color: #e5d3ff;
+      > div {
+        > p {
+          font-size: 1.8rem;
+        }
+        > span {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    #view-7-div5 {
+      background-color: #f34d1f;
+      color: white;
+      > div {
+        > p {
+          font-size: 2.3rem;
+        }
+      }
+    }
+
+    #view-7-div6 {
+      background-color: #9bdfdb;
+    }
+
+    #view-7-div7 {
+      background-color: #96d470;
+    }
+
+    #view-7-div8 {
+      background-color: #f3d682;
+    }
+
+    #view-7-div9 {
+      background-color: #dfed85;
+      > div {
+        > p {
+          font-size: 1.7rem;
+        }
+      }
+    }
+
+    #view-7-div10 {
+      background-color: #dcadf9;
+      > div {
+        > p {
+          font-size: 1.7rem;
+        }
+      }
+    }
+
+    #view-7-div11 {
+      background-color: #f1a3bb;
+    }
+
+    #view-7-div12 {
+      background-color: #f4c4a9;
+    }
+
+    #view-7-div13 {
+      background-color: #dcadf9;
+      > div {
+        > p {
+          font-size: 1.7rem;
+        }
+      }
+    }
+
+    #view-7-div14 {
+      background-color: #f4c87b;
+      > div {
+        > p {
+          font-size: 1.7rem;
+        }
+      }
+    }
 
     }
 
+    #view-7-lower{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      .view-7-lower-icons{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+       
+        >img{
+          width: 2.4rem;
+          object-fit: cover;
+        }
+        >span{
+          font-size: 1.1rem;
+          font-family: f1;
+        }
+      }
+    }
+   
   }
 
+
+   #view-8{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    >#view-8-top{
+      width: 100%;
+      min-height: 40rem;
+      background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c7c5297419fb011d8e5b42_Team%20Photo%20Container.webp");
+      background-position: center;
+      background-size: cover;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      justify-content: flex-end;
+      padding-bottom: 10px;
+      color: #F0DB1D;
+      >h2{
+        padding: 1rem;
+        font-size: 5rem;
+        font-family: f3;
+        line-height: .8;
+      }
+      >span{
+        padding: 1rem;
+        background-color: #201116;
+        font-size: 1.2rem;
+        border-radius: 20px;
+        
+      }
+
+    }
+
+    >#view-8-bottom{
+      width: 100%;
+      >p{
+        text-align: center;
+        font-size: 1.3rem;
+      }
+    }
+
+   }
+
+
+   #view-9{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    >h1{
+      font-family: f1;
+      font-size: 3rem;
+    }
+
+    #view-9-button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      width: fit-content;
+      padding: 20px 90px;
+      background-color: #a034f6;
+      border-radius: 40px;
+      color: white;
+      font-family: f1;
+      >span{
+        font-size: 1.2rem;
+      }
+      >svg{
+        width: 1.4rem;
+      }
+
+    }
+
+    #view-9-side-by-side{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2.4rem;
+      font-family: f1;
+    }
+
+    #view-9-footer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: .5rem;
+
+      #footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+
+    }
+    
+   }
 
 
 }
@@ -386,15 +688,17 @@ main {
 
 
 
-@media (min-width: 480px) {
+
+
+
+@media (min-width: 481px) {
   html {
     font-size: clamp(14px, 1.3vw, 18px);
   }
 
-   main {
+  main {
+    width: 100%;
 
-    
-    
     #view-1 {
       gap: 2rem;
 
@@ -403,25 +707,24 @@ main {
         width: 80%;
       }
 
-      #view-1-buttons{
+      #view-1-buttons {
         flex-direction: row;
         justify-content: center;
-          
-          #view-1-buttons-btn1,#view-1-buttons-btn2{
-            flex-grow: 0;
-            padding: 0.05rem 2rem;
-            >span{
-              font-size: 1rem;
-            }
 
-           }
+        #view-1-buttons-btn1,
+        #view-1-buttons-btn2 {
+          flex-grow: 0;
+          padding: 0.05rem 2rem;
+          > span {
+            font-size: 1rem;
+          }
         }
+      }
 
       > video {
         max-width: 600px;
       }
     }
-    
 
     #view-2 {
       > h2 {
@@ -439,7 +742,7 @@ main {
         scroll-snap-type: x mandatory; /* ✅ smooth snap while scrolling */
         -webkit-overflow-scrolling: touch;
         padding-bottom: 1rem;
-        ::-webkit-scrollbar{
+        ::-webkit-scrollbar {
           display: none;
         }
 
@@ -471,71 +774,181 @@ main {
     }
 
     #view-4 {
-        #view-4-bottom {
-          width: 100%;
-          display: flex;
-          justify-content: flex-end;
-          > img {
-            max-width: 600px;
-          }
+      #view-4-bottom {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        > img {
+          max-width: 600px;
         }
       }
+    }
 
-    #view-5{
-      #view-5-bottom{
+    #view-5 {
+      #view-5-bottom {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 500px 250px 250px 250px 250px;
-       grid-template-areas: "one one"
-                            "two three"
-                            "four five"
-                            "six seven"
-                            "eight nine";
+        grid-template-areas:
+          "one one"
+          "two three"
+          "four five"
+          "six seven"
+          "eight nine";
 
-        .view-5-bottom-container{
-          h2{
+        .view-5-bottom-container {
+          h2 {
             font-size: 1.3rem;
           }
         }
 
-        .one{grid-area: one;}
-        .two{grid-area: two;}
-        .three{grid-area: three;}
-        .four{grid-area: four;}
-        .five{grid-area: five;}
-        .six{grid-area: six;}
-        .seven{grid-area: seven;}
-        .eight{grid-area: eight;}
-        .nine{grid-area: nine;}
-
+        .one {
+          grid-area: one;
+        }
+        .two {
+          grid-area: two;
+        }
+        .three {
+          grid-area: three;
+        }
+        .four {
+          grid-area: four;
+        }
+        .five {
+          grid-area: five;
+        }
+        .six {
+          grid-area: six;
+        }
+        .seven {
+          grid-area: seven;
+        }
+        .eight {
+          grid-area: eight;
+        }
+        .nine {
+          grid-area: nine;
+        }
       }
     }
 
+    #view-6 {
+      gap: 6rem;
+      #view-6-top {
+        gap: 3rem;
+
+        #view-6-top-bottom {
+          .ana {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .ana-one,
+            .ana-two {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+
+    #view-7 {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: auto;
+
+
+      grid-template-areas:
+        "one two"
+        "three four"
+        "five five"
+        "six seven"
+        "six eight"
+        "nine eight"
+        "ten eleven"
+        "twelve thirteen"
+        "fourteen fourteen" 
+        
+    }
+
+    .view-7-child {
+
+      img {
+        height: 8rem;
+        width: 7rem;
+        object-fit: cover;
+      }
 
     
-
-
     }
+
+    // Grid area assignments
+    #view-7-div1 {
+      grid-area: one;
+    }
+    #view-7-div2 {
+      grid-area: two;
+    }
+    #view-7-div3 {
+      grid-area: three;
+    }
+
+    #view-7-div5 {
+      grid-area: four;
+      >div{
+        >p{
+          
+          font-size: 1rem;
+        }
+      }
+    }
+
+    #view-7-div4 {
+      grid-area: five;
+      >div{
+        >p{
+          font-size: .3rem;
+        }
+      }
+    }
+    #view-7-div6 {
+      grid-area: six;
+    }
+    #view-7-div7 {
+      grid-area: seven;
+    }
+    #view-7-div8 {
+      grid-area: eight;
+    }
+    #view-7-div9 {
+      grid-area: nine;
+    }
+    #view-7-div10 {
+      grid-area: ten;
+    }
+    #view-7-div11 {
+      grid-area: eleven;
+    }
+    #view-7-div12 {
+      grid-area: twelve;
+    }
+    #view-7-div13 {
+      grid-area: thirteen;
+    }
+    #view-7-div14 {
+      grid-area: fourteen;
+    }
+  
   }
-
-
-
-
-
-
-
-
+}
 
 
 
 
 
 @media (min-width: 1024px) {
-   html {
+  html {
     font-size: clamp(14px, 2vw, 18px);
   }
   main {
     max-width: 1990px;
-    margin: auto;
     width: 70%;
 
     #view-1 {
@@ -582,44 +995,83 @@ main {
     }
 
     #view-4 {
+      max-width: 1300px;
+      margin: auto;
+      flex-direction: row;
 
-        max-width: 1300px;
-        margin: auto;
-        flex-direction: row;
+      #view-4-top {
+        > p {
+          max-width: 1000px;
+          font-size: 1.2rem;
+        }
+      }
+    }
 
-        #view-4-top {
-          > p {
-            max-width: 1000px;
-            font-size: 1.2rem;
+    #view-5 {
+      #view-5-bottom {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 270px 270px 270px;
+        grid-template-areas:
+          "one one two three"
+          "one one four five"
+          "six seven eight nine";
+
+        .one {
+          grid-area: one;
+        }
+        .two {
+          grid-area: two;
+        }
+        .three {
+          grid-area: three;
+        }
+        .four {
+          grid-area: four;
+        }
+        .five {
+          grid-area: five;
+        }
+        .six {
+          grid-area: six;
+        }
+        .seven {
+          grid-area: seven;
+        }
+        .eight {
+          grid-area: eight;
+        }
+        .nine {
+          grid-area: nine;
+        }
+      }
+    }
+
+    #view-6 {
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 2rem;
+      #view-6-top,
+      #view-6-bottom {
+        width: 50%;
+      }
+
+      #view-6-top {
+        gap: 1rem;
+
+        #view-6-top-bottom {
+          .ana {
+            .ana-one,
+            .ana-two {
+              > h2 {
+                font-size: 1.3rem;
+              }
+              > p {
+                font-size: 0.9rem;
+              }
+            }
           }
         }
       }
-
-    #view-5{
-      #view-5-bottom{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 270px 270px 270px;
-        grid-template-areas: "one one two three"
-                             "one one four five"
-                             "six seven eight nine";
-
-       .one{grid-area: one;}
-        .two{grid-area: two;}
-        .three{grid-area: three;}
-        .four{grid-area: four;}
-        .five{grid-area: five;}
-        .six{grid-area: six;}
-        .seven{grid-area: seven;}
-        .eight{grid-area: eight;}
-        .nine{grid-area: nine;}
-      }
     }
-
-
-
-    }
-
-
   }
-
-     
+}
