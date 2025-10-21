@@ -576,6 +576,8 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1.5rem;
 
     >#view-8-top{
@@ -590,19 +592,25 @@ main {
       flex-direction: column;
       gap: 1.6rem;
       justify-content: flex-end;
-      padding-bottom: 10px;
+      align-items: center;
+      padding-bottom: 1.5rem;
       color: #F0DB1D;
       >h2{
         padding: 1rem;
         font-size: 5rem;
         font-family: f3;
         line-height: .8;
+        text-shadow:10px 4px 4px black;
+        text-align: center;
       }
       >span{
         padding: 1rem;
         background-color: #201116;
         font-size: 1.2rem;
         border-radius: 20px;
+        text-shadow:4px 4px 4px black;
+        line-height: 1.4;
+        text-align: center;
         
       }
 
@@ -617,6 +625,7 @@ main {
     }
 
    }
+
 
 
    #view-9{
@@ -941,6 +950,27 @@ main {
         
     }
 
+
+    #view-8{   
+      #view-8-top{
+        height: 650px;
+        >h2{
+      
+         font-size: 8rem;
+        }
+        >span{
+          font-size: 1rem;
+        }
+      }
+
+
+      #view-8-bottom>p{
+        font-size: 1rem;
+      }
+
+
+    }
+
     
     #view-9{
       >h1{
@@ -1091,7 +1121,13 @@ main {
         }
       }
     }
-    
+     
+
+    #view-8{   
+       #view-8-top{
+        height: 900px;
+       }
+    }
 
 
     #view-9{
