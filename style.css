@@ -546,6 +546,7 @@ main #view-9 {
 main #view-9 > h1 {
   font-family: f1;
   font-size: 3rem;
+  text-align: center;
 }
 main #view-9 #view-9-button {
   display: flex;
@@ -554,7 +555,7 @@ main #view-9 #view-9-button {
   gap: 1rem;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 20px 90px;
+  padding: 20px 80px;
   background-color: #a034f6;
   border-radius: 40px;
   color: white;
@@ -562,6 +563,7 @@ main #view-9 #view-9-button {
 }
 main #view-9 #view-9-button > span {
   font-size: 1.2rem;
+  white-space: nowrap;
 }
 main #view-9 #view-9-button > svg {
   width: 1.4rem;
@@ -579,6 +581,7 @@ main #view-9 #view-9-footer {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  text-align: center;
 }
 main #view-9 #view-9-footer #footer {
   display: flex;
@@ -587,7 +590,7 @@ main #view-9 #view-9-footer #footer {
   gap: 2rem;
 }
 
-@media (min-width: 481px) {
+@media (min-width: 600px) {
   html {
     font-size: clamp(14px, 1.3vw, 18px);
   }
@@ -721,59 +724,65 @@ main #view-9 #view-9-footer #footer {
     grid-auto-rows: auto;
     grid-template-areas: "one two" "three four" "five five" "six seven" "six eight" "nine eight" "ten eleven" "twelve thirteen" "fourteen fourteen";
   }
-  main .view-7-child img {
+  main #view-7 .view-7-child img {
     height: 8rem;
     width: 7rem;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  main #view-7-div1 {
+  main #view-7 #view-7-div1 {
     grid-area: one;
   }
-  main #view-7-div2 {
+  main #view-7 #view-7-div2 {
     grid-area: two;
   }
-  main #view-7-div3 {
+  main #view-7 #view-7-div3 {
     grid-area: three;
   }
-  main #view-7-div5 {
+  main #view-7 #view-7-div5 {
     grid-area: four;
   }
-  main #view-7-div5 > div > p {
+  main #view-7 #view-7-div5 > div > p {
     font-size: 1rem;
   }
-  main #view-7-div4 {
+  main #view-7 #view-7-div4 {
     grid-area: five;
   }
-  main #view-7-div4 > div > p {
+  main #view-7 #view-7-div4 > div > p {
     font-size: 0.3rem;
   }
-  main #view-7-div6 {
+  main #view-7 #view-7-div6 {
     grid-area: six;
   }
-  main #view-7-div7 {
+  main #view-7 #view-7-div7 {
     grid-area: seven;
   }
-  main #view-7-div8 {
+  main #view-7 #view-7-div8 {
     grid-area: eight;
   }
-  main #view-7-div9 {
+  main #view-7 #view-7-div9 {
     grid-area: nine;
   }
-  main #view-7-div10 {
+  main #view-7 #view-7-div10 {
     grid-area: ten;
   }
-  main #view-7-div11 {
+  main #view-7 #view-7-div11 {
     grid-area: eleven;
   }
-  main #view-7-div12 {
+  main #view-7 #view-7-div12 {
     grid-area: twelve;
   }
-  main #view-7-div13 {
+  main #view-7 #view-7-div13 {
     grid-area: thirteen;
   }
-  main #view-7-div14 {
+  main #view-7 #view-7-div14 {
     grid-area: fourteen;
+  }
+  main #view-9 > h1 {
+    font-size: 2.4rem;
+  }
+  main #view-9 #view-9-button {
+    padding: 20px 60px;
   }
 }
 @media (min-width: 1024px) {
@@ -877,5 +886,30 @@ main #view-9 #view-9-footer #footer {
   main #view-6 #view-6-top #view-6-top-bottom .ana .ana-one > p,
   main #view-6 #view-6-top #view-6-top-bottom .ana .ana-two > p {
     font-size: 0.9rem;
+  }
+  main #view-9 > h1 {
+    font-size: 2rem;
+  }
+  main #view-9 #view-9-button {
+    gap: 0.5rem;
+    padding: 20px 60px;
+  }
+  main #view-9 #view-9-button > span {
+    font-size: 1rem;
+  }
+  main #view-9 #view-9-button > svg {
+    width: 1.1rem;
+  }
+  main #view-9 #view-9-side-by-side {
+    gap: 1.4rem;
+  }
+  main #view-9 #view-9-side-by-side > span {
+    font-size: 0.8rem;
+  }
+  main #view-9 #view-9-footer {
+    flex-direction: row;
+  }
+  main #view-9 #view-9-footer > span, main #view-9 #view-9-footer #footer > span {
+    font-size: 0.7rem;
   }
 }/*# sourceMappingURL=style.css.map */
