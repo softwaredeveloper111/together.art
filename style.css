@@ -390,7 +390,7 @@ main #view-7 #view-7-upper .view-7-child {
 }
 main #view-7 #view-7-upper .view-7-child > img {
   width: 7rem;
-  height: 6rem;
+  height: 7rem;
   border-radius: 10px;
   -o-object-position: center;
      object-position: center;
@@ -400,6 +400,7 @@ main #view-7 #view-7-upper .view-7-child > img {
 main #view-7 #view-7-upper .view-7-child > div {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 1rem;
 }
 main #view-7 #view-7-upper .view-7-child > div > p {
@@ -423,10 +424,7 @@ main #view-7 #view-7-upper #view-7-div4 {
   background-color: #e5d3ff;
 }
 main #view-7 #view-7-upper #view-7-div4 > div > p {
-  font-size: 1.8rem;
-}
-main #view-7 #view-7-upper #view-7-div4 > div > span {
-  font-size: 1.1rem;
+  font-size: 1.65rem;
 }
 main #view-7 #view-7-upper #view-7-div5 {
   background-color: #f34d1f;
@@ -448,13 +446,13 @@ main #view-7 #view-7-upper #view-7-div9 {
   background-color: #dfed85;
 }
 main #view-7 #view-7-upper #view-7-div9 > div > p {
-  font-size: 1.7rem;
+  font-size: 1.65rem;
 }
 main #view-7 #view-7-upper #view-7-div10 {
   background-color: #dcadf9;
 }
 main #view-7 #view-7-upper #view-7-div10 > div > p {
-  font-size: 1.7rem;
+  font-size: 1.65rem;
 }
 main #view-7 #view-7-upper #view-7-div11 {
   background-color: #f1a3bb;
@@ -466,13 +464,13 @@ main #view-7 #view-7-upper #view-7-div13 {
   background-color: #dcadf9;
 }
 main #view-7 #view-7-upper #view-7-div13 > div > p {
-  font-size: 1.7rem;
+  font-size: 1.65rem;
 }
 main #view-7 #view-7-upper #view-7-div14 {
   background-color: #f4c87b;
 }
 main #view-7 #view-7-upper #view-7-div14 > div > p {
-  font-size: 1.7rem;
+  font-size: 1.65rem;
 }
 main #view-7 #view-7-lower {
   width: 100%;
@@ -517,7 +515,7 @@ main #view-8 > #view-8-top {
   justify-content: flex-end;
   align-items: center;
   padding-bottom: 1.5rem;
-  color: #F0DB1D;
+  color: #f0db1d;
 }
 main #view-8 > #view-8-top > h2 {
   padding: 1rem;
@@ -727,64 +725,80 @@ main #view-9 #view-9-footer #footer {
   main #view-6 #view-6-top #view-6-top-bottom .ana .ana-two {
     width: 50%;
   }
-  main #view-7 {
+  main #view-7 #view-7-upper {
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: auto;
+    grid-template-rows: repeat(9, auto);
     grid-template-areas: "one two" "three four" "five five" "six seven" "six eight" "nine eight" "ten eleven" "twelve thirteen" "fourteen fourteen";
   }
-  main #view-7 .view-7-child img {
-    height: 8rem;
-    width: 7rem;
+  main #view-7 #view-7-upper .view-7-child img {
+    height: 9.5rem;
+    width: 9.5rem;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  main #view-7 #view-7-div1 {
+  main #view-7 #view-7-upper .view-7-child > div > p {
+    font-size: 1.5rem;
+  }
+  main #view-7 #view-7-upper #view-7-div1 {
     grid-area: one;
   }
-  main #view-7 #view-7-div2 {
+  main #view-7 #view-7-upper #view-7-div2 {
     grid-area: two;
   }
-  main #view-7 #view-7-div3 {
+  main #view-7 #view-7-upper #view-7-div3 {
     grid-area: three;
   }
-  main #view-7 #view-7-div5 {
+  main #view-7 #view-7-upper #view-7-div5 {
     grid-area: four;
   }
-  main #view-7 #view-7-div5 > div > p {
-    font-size: 1rem;
+  main #view-7 #view-7-upper #view-7-div5 > div > p {
+    font-size: 2.6rem;
+    line-height: 1;
   }
-  main #view-7 #view-7-div4 {
+  main #view-7 #view-7-upper #view-7-div4 {
     grid-area: five;
   }
-  main #view-7 #view-7-div4 > div > p {
-    font-size: 0.3rem;
+  main #view-7 #view-7-upper #view-7-div4 > div > p {
+    font-size: 1.8rem;
   }
-  main #view-7 #view-7-div6 {
+  main #view-7 #view-7-upper #view-7-div6 {
     grid-area: six;
   }
-  main #view-7 #view-7-div7 {
+  main #view-7 #view-7-upper #view-7-div7 {
     grid-area: seven;
   }
-  main #view-7 #view-7-div8 {
+  main #view-7 #view-7-upper #view-7-div8 {
     grid-area: eight;
   }
-  main #view-7 #view-7-div9 {
+  main #view-7 #view-7-upper #view-7-div9 {
     grid-area: nine;
   }
-  main #view-7 #view-7-div10 {
+  main #view-7 #view-7-upper #view-7-div9 > div > p {
+    font-size: 1.8rem;
+  }
+  main #view-7 #view-7-upper #view-7-div10 {
     grid-area: ten;
   }
-  main #view-7 #view-7-div11 {
+  main #view-7 #view-7-upper #view-7-div10 > div > p {
+    font-size: 1.8rem;
+  }
+  main #view-7 #view-7-upper #view-7-div11 {
     grid-area: eleven;
   }
-  main #view-7 #view-7-div12 {
+  main #view-7 #view-7-upper #view-7-div12 {
     grid-area: twelve;
   }
-  main #view-7 #view-7-div13 {
+  main #view-7 #view-7-upper #view-7-div13 {
+    grid-area: fourteen;
+  }
+  main #view-7 #view-7-upper #view-7-div13 > div > p {
+    font-size: 1.8rem;
+  }
+  main #view-7 #view-7-upper #view-7-div14 {
     grid-area: thirteen;
   }
-  main #view-7 #view-7-div14 {
-    grid-area: fourteen;
+  main #view-7 #view-7-upper #view-7-div14 > div > p {
+    font-size: 1.8rem;
   }
   main #view-8 #view-8-top {
     height: 650px;
@@ -907,6 +921,91 @@ main #view-9 #view-9-footer #footer {
   main #view-6 #view-6-top #view-6-top-bottom .ana .ana-two > p {
     font-size: 0.9rem;
   }
+  main #view-7 #view-7-upper {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "one two three" "four four five" "six seven eight" "six nine eight" "ten eleven twelve" "thirteen thirteen fourteen";
+  }
+  main #view-7 #view-7-upper .view-7-child {
+    gap: 1rem;
+  }
+  main #view-7 #view-7-upper .view-7-child > img {
+    height: 8rem;
+    width: 8rem;
+  }
+  main #view-7 #view-7-upper .view-7-child > div > p {
+    font-size: 1rem;
+  }
+  main #view-7 #view-7-upper .view-7-child > div > span {
+    font-size: 0.7rem;
+  }
+  main #view-7 #view-7-upper #view-7-div1 {
+    grid-area: one;
+  }
+  main #view-7 #view-7-upper #view-7-div2 {
+    grid-area: two;
+  }
+  main #view-7 #view-7-upper #view-7-div3 {
+    grid-area: three;
+  }
+  main #view-7 #view-7-upper #view-7-div4 {
+    grid-area: four;
+  }
+  main #view-7 #view-7-upper #view-7-div4 > div > p {
+    font-size: 1.2rem;
+  }
+  main #view-7 #view-7-upper #view-7-div5 {
+    grid-area: five;
+  }
+  main #view-7 #view-7-upper #view-7-div5 > div > p {
+    font-size: 1.7rem;
+    line-height: 1.3;
+  }
+  main #view-7 #view-7-upper #view-7-div6 {
+    grid-area: six;
+  }
+  main #view-7 #view-7-upper #view-7-div7 {
+    grid-area: seven;
+  }
+  main #view-7 #view-7-upper #view-7-div8 {
+    grid-area: eight;
+  }
+  main #view-7 #view-7-upper #view-7-div9 {
+    grid-area: nine;
+  }
+  main #view-7 #view-7-upper #view-7-div9 > div > p {
+    font-size: 1.2rem;
+  }
+  main #view-7 #view-7-upper #view-7-div10 {
+    grid-area: ten;
+  }
+  main #view-7 #view-7-upper #view-7-div10 > div > p {
+    font-size: 1.2rem;
+  }
+  main #view-7 #view-7-upper #view-7-div11 {
+    grid-area: eleven;
+  }
+  main #view-7 #view-7-upper #view-7-div12 {
+    grid-area: twelve;
+  }
+  main #view-7 #view-7-upper #view-7-div13 {
+    grid-area: thirteen;
+  }
+  main #view-7 #view-7-upper #view-7-div13 > div > p {
+    font-size: 1.2rem;
+  }
+  main #view-7 #view-7-upper #view-7-div14 {
+    grid-area: fourteen;
+  }
+  main #view-7 #view-7-upper #view-7-div14 > div > p {
+    font-size: 1.2rem;
+  }
+  main #view-7 #view-7-lower .view-7-lower-icons > img {
+    width: 1.65rem;
+  }
+  main #view-7 #view-7-lower .view-7-lower-icons > span {
+    font-size: 0.8rem;
+  }
   main #view-8 #view-8-top {
     height: 900px;
   }
@@ -932,7 +1031,8 @@ main #view-9 #view-9-footer #footer {
   main #view-9 #view-9-footer {
     flex-direction: row;
   }
-  main #view-9 #view-9-footer > span, main #view-9 #view-9-footer #footer > span {
+  main #view-9 #view-9-footer > span,
+  main #view-9 #view-9-footer #footer > span {
     font-size: 0.7rem;
   }
 }/*# sourceMappingURL=style.css.map */

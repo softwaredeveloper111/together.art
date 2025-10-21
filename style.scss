@@ -51,7 +51,6 @@ body {
   overflow-x: hidden;
 }
 
-
 main {
   width: 100%;
   margin: 0 auto;
@@ -417,162 +416,157 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    #view-7-upper{
-       width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(14, auto);
-    grid-gap: 1rem;
+    #view-7-upper {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(14, auto);
+      grid-gap: 1rem;
 
-    .view-7-child {
-      overflow: hidden;
-      border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 1.5rem;
-
-      > img {
-        width: 7rem;
-        height: 6rem;
+      .view-7-child {
+        overflow: hidden;
         border-radius: 10px;
-        object-position: center;
-        object-fit: cover;
-      }
-
-      > div {
         display: flex;
-        flex-direction: column;
-        gap: 1rem;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
 
-        > p {
-          font-size: 1.2rem;
-          line-height: 1.5;
+        > img {
+          width: 7rem;
+          height: 7rem;
+          border-radius: 10px;
+          object-position: center;
+          object-fit: cover;
         }
 
-        > span {
-          font-family: f3;
-          font-size: 1.1rem;
+        > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 1rem;
+
+          > p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+          }
+
+          > span {
+            font-family: f3;
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      #view-7-div1 {
+        background-color: #96d470;
+      }
+      #view-7-div2 {
+        background-color: #f2ee8f;
+      }
+      #view-7-div3 {
+        background-color: #dcadf9;
+      }
+
+      #view-7-div4 {
+        background-color: #e5d3ff;
+        > div {
+          > p {
+            font-size: 1.65rem;
+          }
+        }
+      }
+
+      #view-7-div5 {
+        background-color: #f34d1f;
+        color: white;
+        > div {
+          > p {
+            font-size: 2.3rem;
+          }
+        }
+      }
+
+      #view-7-div6 {
+        background-color: #9bdfdb;
+      }
+
+      #view-7-div7 {
+        background-color: #96d470;
+      }
+
+      #view-7-div8 {
+        background-color: #f3d682;
+      }
+
+      #view-7-div9 {
+        background-color: #dfed85;
+        > div {
+          > p {
+            font-size: 1.65rem;
+          }
+        }
+      }
+
+      #view-7-div10 {
+        background-color: #dcadf9;
+        > div {
+          > p {
+            font-size: 1.65rem;
+          }
+        }
+      }
+
+      #view-7-div11 {
+        background-color: #f1a3bb;
+      }
+
+      #view-7-div12 {
+        background-color: #f4c4a9;
+      }
+
+      #view-7-div13 {
+        background-color: #dcadf9;
+        > div {
+          > p {
+            font-size: 1.65rem;
+          }
+        }
+      }
+
+      #view-7-div14 {
+        background-color: #f4c87b;
+        > div {
+          > p {
+            font-size: 1.65rem;
+          }
         }
       }
     }
 
-    #view-7-div1 {
-      background-color: #96d470;
-    }
-    #view-7-div2 {
-      background-color: #f2ee8f;
-    }
-    #view-7-div3 {
-      background-color: #dcadf9;
-    }
-
-    #view-7-div4 {
-      background-color: #e5d3ff;
-      > div {
-        > p {
-          font-size: 1.8rem;
-        }
-        > span {
-          font-size: 1.1rem;
-        }
-      }
-    }
-
-    #view-7-div5 {
-      background-color: #f34d1f;
-      color: white;
-      > div {
-        > p {
-          font-size: 2.3rem;
-        }
-      }
-    }
-
-    #view-7-div6 {
-      background-color: #9bdfdb;
-    }
-
-    #view-7-div7 {
-      background-color: #96d470;
-    }
-
-    #view-7-div8 {
-      background-color: #f3d682;
-    }
-
-    #view-7-div9 {
-      background-color: #dfed85;
-      > div {
-        > p {
-          font-size: 1.7rem;
-        }
-      }
-    }
-
-    #view-7-div10 {
-      background-color: #dcadf9;
-      > div {
-        > p {
-          font-size: 1.7rem;
-        }
-      }
-    }
-
-    #view-7-div11 {
-      background-color: #f1a3bb;
-    }
-
-    #view-7-div12 {
-      background-color: #f4c4a9;
-    }
-
-    #view-7-div13 {
-      background-color: #dcadf9;
-      > div {
-        > p {
-          font-size: 1.7rem;
-        }
-      }
-    }
-
-    #view-7-div14 {
-      background-color: #f4c87b;
-      > div {
-        > p {
-          font-size: 1.7rem;
-        }
-      }
-    }
-
-    }
-
-    #view-7-lower{
+    #view-7-lower {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1.5rem;
-      .view-7-lower-icons{
+      .view-7-lower-icons {
         display: flex;
         gap: 1rem;
         align-items: center;
-       
-        >img{
+
+        > img {
           width: 2.4rem;
           object-fit: cover;
         }
-        >span{
+        > span {
           font-size: 1.1rem;
           font-family: f1;
         }
       }
     }
-   
   }
 
-
-   #view-8{
+  #view-8 {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -580,7 +574,7 @@ main {
     align-items: center;
     gap: 1.5rem;
 
-    >#view-8-top{
+    > #view-8-top {
       width: 100%;
       min-height: 40rem;
       background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c7c5297419fb011d8e5b42_Team%20Photo%20Container.webp");
@@ -594,54 +588,49 @@ main {
       justify-content: flex-end;
       align-items: center;
       padding-bottom: 1.5rem;
-      color: #F0DB1D;
-      >h2{
+      color: #f0db1d;
+      > h2 {
         padding: 1rem;
         font-size: 5rem;
         font-family: f3;
-        line-height: .8;
-        text-shadow:10px 4px 4px black;
+        line-height: 0.8;
+        text-shadow: 10px 4px 4px black;
         text-align: center;
       }
-      >span{
+      > span {
         padding: 1rem;
         background-color: #201116;
         font-size: 1.2rem;
         border-radius: 20px;
-        text-shadow:4px 4px 4px black;
+        text-shadow: 4px 4px 4px black;
         line-height: 1.4;
         text-align: center;
-        
       }
-
     }
 
-    >#view-8-bottom{
+    > #view-8-bottom {
       width: 100%;
-      >p{
+      > p {
         text-align: center;
         font-size: 1.3rem;
       }
     }
+  }
 
-   }
-
-
-
-   #view-9{
+  #view-9 {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-    >h1{
+    > h1 {
       font-family: f1;
       font-size: 3rem;
       text-align: center;
     }
 
-    #view-9-button{
+    #view-9-button {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -652,50 +641,40 @@ main {
       border-radius: 40px;
       color: white;
       font-family: f1;
-      >span{
+      > span {
         font-size: 1.2rem;
         white-space: nowrap;
       }
-      >svg{
+      > svg {
         width: 1.4rem;
       }
-
     }
 
-    #view-9-side-by-side{
+    #view-9-side-by-side {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 2.4rem;
       font-family: f1;
-
     }
 
-    #view-9-footer{
+    #view-9-footer {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: .5rem;
+      gap: 0.5rem;
       text-align: center;
 
-      #footer{
+      #footer {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 2rem;
       }
-
     }
-    
-   }
-
-
+  }
 }
-
-
-
-
 
 
 
@@ -864,9 +843,11 @@ main {
     }
 
     #view-7 {
-      grid-template-columns: 1fr 1fr;
-      grid-auto-rows: auto;
 
+      #view-7-upper{
+
+        grid-template-columns: 1fr 1fr;
+       grid-template-rows: repeat(9,auto);
 
       grid-template-areas:
         "one two"
@@ -878,114 +859,136 @@ main {
         "ten eleven"
         "twelve thirteen"
         "fourteen fourteen";
-        
-       .view-7-child {
 
-      img {
-        height: 8rem;
-        width: 7rem;
-        object-fit: cover;
-      }
-
-    
-    }
-
-    // Grid area assignments
-    #view-7-div1 {
-      grid-area: one;
-    }
-    #view-7-div2 {
-      grid-area: two;
-    }
-    #view-7-div3 {
-      grid-area: three;
-    }
-
-    #view-7-div5 {
-      grid-area: four;
-      >div{
-        >p{
-          
-          font-size: 1rem;
+      .view-7-child {
+        img {
+          height: 9.5rem;
+          width: 9.5rem;
+          object-fit: cover;
+        }
+        >div{
+          >p{
+            font-size: 1.5rem;
+          }
         }
       }
-    }
 
-    #view-7-div4 {
-      grid-area: five;
-      >div{
-        >p{
-          font-size: .3rem;
+      #view-7-div1 {
+        grid-area: one;
+      }
+      #view-7-div2 {
+        grid-area: two;
+      }
+      #view-7-div3 {
+        grid-area: three;
+      }
+
+      #view-7-div5 {
+        grid-area: four;
+        > div {
+          > p {
+            font-size: 2.6rem;
+            line-height: 1;
+          }
         }
       }
-    }
-    #view-7-div6 {
-      grid-area: six;
-    }
-    #view-7-div7 {
-      grid-area: seven;
-    }
-    #view-7-div8 {
-      grid-area: eight;
-    }
-    #view-7-div9 {
-      grid-area: nine;
-    }
-    #view-7-div10 {
-      grid-area: ten;
-    }
-    #view-7-div11 {
-      grid-area: eleven;
-    }
-    #view-7-div12 {
-      grid-area: twelve;
-    }
-    #view-7-div13 {
-      grid-area: thirteen;
-    }
-    #view-7-div14 {
-      grid-area: fourteen;
-    }
-  
-        
-    }
 
+      #view-7-div4 {
+        grid-area: five;
+        > div {
+          > p {
+            font-size: 1.8rem;
+          }
+        }
+      }
 
-    #view-8{   
-      #view-8-top{
-        height: 650px;
-        >h2{
+      #view-7-div6 {
+        grid-area: six;
+      }
+      #view-7-div7 {
+        grid-area: seven;
+      }
+      #view-7-div8 {
+        grid-area: eight;
+      }
+      #view-7-div9 {
+        grid-area: nine;
+          >div{
+          >p{
+            font-size: 1.8rem;
+          }
+        }
+
+      }
+      #view-7-div10 {
+        grid-area: ten;
+          >div{
+          >p{
+            font-size: 1.8rem;
+          }
+        }
+      }
+      #view-7-div11 {
+        grid-area: eleven;
+      }
+      #view-7-div12 {
+        grid-area: twelve;
+      }
+      #view-7-div13 {
+        grid-area: fourteen;
+          >div{
+          >p{
+            font-size: 1.8rem;
+          }
+        }
+      }
+      #view-7-div14 {
+        grid-area:thirteen;
+        >div{
+          >p{
+            font-size: 1.8rem;
+          }
+        }
+      }
+
+      }
       
-         font-size: 8rem;
+    }
+
+
+    #view-8 {
+      #view-8-top {
+        height: 650px;
+        > h2 {
+          font-size: 8rem;
         }
-        >span{
+        > span {
           font-size: 1rem;
         }
       }
 
-
-      #view-8-bottom>p{
+      #view-8-bottom > p {
         font-size: 1rem;
       }
-
-
     }
 
-    
-    #view-9{
-      >h1{
+    #view-9 {
+      > h1 {
         font-size: 2.4rem;
       }
 
-      #view-9-button{
+      #view-9-button {
         padding: 20px 60px;
       }
     }
-
-
-    
   }
 }
+
+
+
+
+
+
 
 
 
@@ -1121,47 +1124,176 @@ main {
         }
       }
     }
-     
 
-    #view-8{   
-       #view-8-top{
-        height: 900px;
-       }
+    #view-7 {
+      #view-7-upper {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat((6, auto));
+        grid-template-areas: "one two three"
+                             "four four five"
+                             "six seven eight"
+                             "six nine eight"
+                             "ten eleven twelve"
+                             "thirteen thirteen fourteen";
+
+         .view-7-child{
+          gap: 1rem;
+           > img{
+            height: 8rem;
+            width: 8rem;
+           }
+           >div{
+            >p{
+              font-size: 1rem;
+            }
+            >span{
+              font-size: .7rem;
+            }
+           }
+         }                     
+
+        #view-7-div1 {
+          grid-area: one;
+        }
+        #view-7-div2 {
+          grid-area: two;
+        }
+        #view-7-div3 {
+         grid-area: three;
+        }
+
+        #view-7-div4 {
+         grid-area: four;
+         >div{
+           >p{
+            font-size: 1.2rem;
+           }
+         
+         }
+        }
+
+        #view-7-div5 {
+           grid-area: five;
+           >div{
+            >p{
+              font-size: 1.7rem;
+              line-height: 1.3;
+            }
+           }
+        }
+
+        #view-7-div6 {
+          grid-area: six;
+        }
+
+        #view-7-div7 {
+          grid-area: seven;
+          
+        }
+
+        #view-7-div8 {
+          grid-area: eight;
+        }
+
+        #view-7-div9 {
+          grid-area: nine;
+          >div{
+            >p{
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        #view-7-div10 {
+         grid-area: ten;
+          >div{
+            >p{
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        #view-7-div11 {
+           grid-area: eleven;
+        }
+
+        #view-7-div12 {
+          grid-area: twelve;
+        }
+
+        #view-7-div13 {
+         grid-area: thirteen;
+          >div{
+            >p{
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        #view-7-div14 {
+         grid-area: fourteen;
+          >div{
+            >p{
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+
+      }
+
+      #view-7-lower{
+         .view-7-lower-icons{
+          >img{
+            width: 1.65rem;
+          }
+          >span{
+            font-size: .8rem;
+          }
+         }
+      }
+
+
+
     }
 
 
-    #view-9{
-      >h1{
+
+    #view-8 {
+      #view-8-top {
+        height: 900px;
+      }
+    }
+
+    #view-9 {
+      > h1 {
         font-size: 2rem;
       }
-      #view-9-button{
-        gap: .5rem;
+      #view-9-button {
+        gap: 0.5rem;
         padding: 20px 60px;
-        >span{
-          font-size:1rem;
+        > span {
+          font-size: 1rem;
         }
-        >svg{
+        > svg {
           width: 1.1rem;
         }
       }
 
-      #view-9-side-by-side{
-          gap: 1.4rem;
-          >span{
-
-            font-size: .8rem;
-          }
-      }
-      
-      #view-9-footer{
-        flex-direction: row;
-        >span,#footer>span{
-          font-size: .7rem;
+      #view-9-side-by-side {
+        gap: 1.4rem;
+        > span {
+          font-size: 0.8rem;
         }
       }
 
+      #view-9-footer {
+        flex-direction: row;
+        > span,
+        #footer > span {
+          font-size: 0.7rem;
+        }
+      }
     }
-
-
   }
 }
