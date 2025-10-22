@@ -66,66 +66,122 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 2rem;
 
-    > h1 {
+    #view-1-top {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      line-height: 0.9;
-
-      > span {
-        font-size: 5rem;
-        font-family: f3;
-        white-space: nowrap;
-      }
-    }
-
-    > p {
-      font-size: 1.6rem;
-      text-align: center;
-      color: rgba(0, 0, 0, 0.945);
-    }
-
-    #view-1-buttons {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
+      justify-content: center;
       gap: 1.5rem;
-
-      > #view-1-buttons-btn1,
-      > #view-1-buttons-btn2 {
+      align-items: center;
+      > h1 {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        flex-grow: 1;
-        padding: 0.5rem 0;
-        background-color: transparent;
-        border: 1px solid rgba(0, 0, 0, 0.774);
-        border-radius: 5px;
-        font-size: 1.3rem;
+        line-height: 0.9;
 
         > span {
-          font-family: f2;
-          letter-spacing: -1px;
-          opacity: 0.8;
+          font-size: 5rem;
+          font-family: f3;
+          white-space: nowrap;
         }
       }
 
-      > #view-1-buttons-btn2 {
-        padding: 1.4rem 0;
-        background-color: #a034f6;
-        border: none;
-        color: white;
-        > span {
-          opacity: 1;
+      > p {
+        font-size: 1.6rem;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.945);
+      }
+
+      #view-1-buttons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        > #view-1-buttons-btn1,
+        > #view-1-buttons-btn2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-grow: 1;
+          padding: 0.5rem 0;
+          background-color: transparent;
+          border: 1px solid rgba(0, 0, 0, 0.774);
+          border-radius: 5px;
+          font-size: 1.3rem;
+
+          > span {
+            font-family: f2;
+            letter-spacing: -1px;
+            opacity: 0.8;
+          }
+        }
+
+        > #view-1-buttons-btn2 {
+          padding: 1.4rem 0;
+          background-color: #a034f6;
+          border: none;
+          color: white;
+          > span {
+            opacity: 1;
+          }
         }
       }
     }
 
-    > video {
-      border-radius: 10px;
+    #view-1-bottom {
       width: 100%;
+      height: 15rem;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      #video-container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        > video {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        > span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 6.5rem;
+          width: 6.5rem;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba(0, 0, 0, 0.493);
+
+          > i {
+            font-size: 3.3rem;
+            color: white;
+          }
+        }
+
+        #overlay {
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.315);
+          position: absolute;
+
+          top: 0%;
+          bottom: 0%;
+          left: 0%;
+          right: 0%;
+        }
+      }
+
+      #image-container {
+        display: none;
+      }
     }
   }
 
@@ -153,9 +209,7 @@ main {
       align-items: center;
 
       .view-2-cards-child {
-    
         border-radius: 10px;
-        
 
         > div {
           display: flex;
@@ -175,7 +229,9 @@ main {
         }
       }
 
-      #view-2-cards-card1, #view-2-cards-card2,#view-2-cards-card3{
+      #view-2-cards-card1,
+      #view-2-cards-card2,
+      #view-2-cards-card3 {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -219,13 +275,13 @@ main {
       }
 
       #view-2-cards-card2 {
-        #image-wrapper{
+        #image-wrapper {
           background-image: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c7c1e4d9f74852725ad840_Cards%20%20--lummi.webp");
         }
       }
 
       #view-2-cards-card3 {
-         #image-wrapper{
+        #image-wrapper {
           background-image: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c915a4215b22ddf3222ef2_dude_Background.webp");
         }
       }
@@ -725,7 +781,6 @@ main {
 
 
 
-
 @media (min-width: 600px) {
   html {
     font-size: clamp(14px, 1.3vw, 18px);
@@ -736,28 +791,74 @@ main {
 
     #view-1 {
       gap: 2rem;
+      #view-1-top {
+        > p {
+          font-size: 1.3rem;
+          width: 80%;
+        }
 
-      > p {
-        font-size: 1.3rem;
-        width: 80%;
-      }
+        #view-1-buttons {
+          flex-direction: row;
+          justify-content: center;
 
-      #view-1-buttons {
-        flex-direction: row;
-        justify-content: center;
-
-        #view-1-buttons-btn1,
-        #view-1-buttons-btn2 {
-          flex-grow: 0;
-          padding: 0.05rem 2rem;
-          > span {
-            font-size: 1rem;
+          #view-1-buttons-btn1,
+          #view-1-buttons-btn2 {
+            flex-grow: 0;
+            padding: 0.05rem 2rem;
+            > span {
+              font-size: 1rem;
+            }
           }
         }
       }
 
-      > video {
-        max-width: 600px;
+      #view-1-bottom {
+        width: 800px;
+        height: 25rem;
+        position: relative;
+        overflow: visible;
+        #video-container {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+          > video {
+            max-width: 600px;
+            border-radius: 15px;
+          }
+
+          #overlay{
+            width: 600px;
+            margin: auto;
+            border-radius: 14px;
+          }
+        }
+        #image-container {
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          position: absolute;
+          z-index: -1 ;
+          top: 0;
+          transform: translateY(10%);
+
+          .left,
+          .right {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            width: 50%;
+            >img{
+              width: 13vw;
+              border-radius: 10px;
+            }
+          }
+          
+          .right{
+            align-items: flex-end;
+
+          }
+        }
       }
     }
 
@@ -772,13 +873,12 @@ main {
         align-items: stretch;
         gap: 2rem;
 
-        overflow-x: auto; 
+        overflow-x: auto;
 
         padding-bottom: 1rem;
-  
 
         .view-2-cards-child {
-          flex: 0 0 90%; 
+          flex: 0 0 90%;
           scroll-snap-align: center;
           border-radius: 10px;
           max-width: 400px;
@@ -791,7 +891,7 @@ main {
         }
       }
 
-      #view-2-cards::-webkit-scrollbar{
+      #view-2-cards::-webkit-scrollbar {
         display: none;
       }
     }
@@ -1022,6 +1122,7 @@ main {
 
 
 
+
 @media (min-width: 1024px) {
   html {
     font-size: clamp(14px, 2vw, 18px);
@@ -1031,13 +1132,37 @@ main {
     width: 70%;
 
     #view-1 {
-      > p {
+      #view-1-top{
+          > p {
         font-size: 1.2rem;
       }
 
-      > video {
+      }
+
+    #view-1-bottom{
+      width: 1200px;
+        #video-container{
+        > video {
         max-width: 800px;
       }
+      #overlay{
+        width: 800px;
+      }
+        }
+        #image-container{
+          .left,.right{
+            gap: 1.3rem;
+            >img{
+              height: 8rem;
+              width: 11rem;
+              object-fit: cover;
+            }
+          }
+          transform: translateY(-16%);
+        }
+      }
+     
+     
     }
 
     #view-2 {
@@ -1048,20 +1173,17 @@ main {
 
       #view-2-cards {
         justify-content: center;
-   
-        .view-2-cards-child{
-          >div{
-            >p{
-             font-size: 1rem;
+
+        .view-2-cards-child {
+          > div {
+            > p {
+              font-size: 1rem;
             }
-            >h2{
+            > h2 {
               font-size: 1.25rem;
             }
           }
         }
-       
-      
-         
       }
     }
 

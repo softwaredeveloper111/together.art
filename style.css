@@ -62,32 +62,40 @@ main #view-1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 2rem;
 }
-main #view-1 > h1 {
+main #view-1 #view-1-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+}
+main #view-1 #view-1-top > h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
   line-height: 0.9;
 }
-main #view-1 > h1 > span {
+main #view-1 #view-1-top > h1 > span {
   font-size: 5rem;
   font-family: f3;
   white-space: nowrap;
 }
-main #view-1 > p {
+main #view-1 #view-1-top > p {
   font-size: 1.6rem;
   text-align: center;
   color: rgba(0, 0, 0, 0.945);
 }
-main #view-1 #view-1-buttons {
+main #view-1 #view-1-top #view-1-buttons {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-main #view-1 #view-1-buttons > #view-1-buttons-btn1,
-main #view-1 #view-1-buttons > #view-1-buttons-btn2 {
+main #view-1 #view-1-top #view-1-buttons > #view-1-buttons-btn1,
+main #view-1 #view-1-top #view-1-buttons > #view-1-buttons-btn2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,24 +106,68 @@ main #view-1 #view-1-buttons > #view-1-buttons-btn2 {
   border-radius: 5px;
   font-size: 1.3rem;
 }
-main #view-1 #view-1-buttons > #view-1-buttons-btn1 > span,
-main #view-1 #view-1-buttons > #view-1-buttons-btn2 > span {
+main #view-1 #view-1-top #view-1-buttons > #view-1-buttons-btn1 > span,
+main #view-1 #view-1-top #view-1-buttons > #view-1-buttons-btn2 > span {
   font-family: f2;
   letter-spacing: -1px;
   opacity: 0.8;
 }
-main #view-1 #view-1-buttons > #view-1-buttons-btn2 {
+main #view-1 #view-1-top #view-1-buttons > #view-1-buttons-btn2 {
   padding: 1.4rem 0;
   background-color: #a034f6;
   border: none;
   color: white;
 }
-main #view-1 #view-1-buttons > #view-1-buttons-btn2 > span {
+main #view-1 #view-1-top #view-1-buttons > #view-1-buttons-btn2 > span {
   opacity: 1;
 }
-main #view-1 > video {
-  border-radius: 10px;
+main #view-1 #view-1-bottom {
   width: 100%;
+  height: 15rem;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+main #view-1 #view-1-bottom #video-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+main #view-1 #view-1-bottom #video-container > video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #view-1 #view-1-bottom #video-container > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.493);
+}
+main #view-1 #view-1-bottom #video-container > span > i {
+  font-size: 3.3rem;
+  color: white;
+}
+main #view-1 #view-1-bottom #video-container #overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.315);
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+main #view-1 #view-1-bottom #image-container {
+  display: none;
 }
 main #view-2 {
   display: flex;
@@ -157,7 +209,9 @@ main #view-2 #view-2-cards .view-2-cards-child > div > h2 {
 main #view-2 #view-2-cards .view-2-cards-child > div > p {
   font-size: 1.3rem;
 }
-main #view-2 #view-2-cards #view-2-cards-card1, main #view-2 #view-2-cards #view-2-cards-card2, main #view-2 #view-2-cards #view-2-cards-card3 {
+main #view-2 #view-2-cards #view-2-cards-card1,
+main #view-2 #view-2-cards #view-2-cards-card2,
+main #view-2 #view-2-cards #view-2-cards-card3 {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -169,7 +223,9 @@ main #view-2 #view-2-cards #view-2-cards-card1, main #view-2 #view-2-cards #view
   position: relative;
   aspect-ratio: 3.84/6.12;
 }
-main #view-2 #view-2-cards #view-2-cards-card1 #image-wrapper, main #view-2 #view-2-cards #view-2-cards-card2 #image-wrapper, main #view-2 #view-2-cards #view-2-cards-card3 #image-wrapper {
+main #view-2 #view-2-cards #view-2-cards-card1 #image-wrapper,
+main #view-2 #view-2-cards #view-2-cards-card2 #image-wrapper,
+main #view-2 #view-2-cards #view-2-cards-card3 #image-wrapper {
   background-image: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c915a4bf7b6f26de86f7ef_pink-Background.webp");
   background-size: cover;
   flex-direction: column;
@@ -184,7 +240,9 @@ main #view-2 #view-2-cards #view-2-cards-card1 #image-wrapper, main #view-2 #vie
   left: 0%;
   right: 0%;
 }
-main #view-2 #view-2-cards #view-2-cards-card1 #card-content, main #view-2 #view-2-cards #view-2-cards-card2 #card-content, main #view-2 #view-2-cards #view-2-cards-card3 #card-content {
+main #view-2 #view-2-cards #view-2-cards-card1 #card-content,
+main #view-2 #view-2-cards #view-2-cards-card2 #card-content,
+main #view-2 #view-2-cards #view-2-cards-card3 #card-content {
   padding: 1.5rem;
   z-index: 3;
   grid-column-gap: 0.45rem;
@@ -638,25 +696,67 @@ main #view-9 #view-9-footer #footer {
   main #view-1 {
     gap: 2rem;
   }
-  main #view-1 > p {
+  main #view-1 #view-1-top > p {
     font-size: 1.3rem;
     width: 80%;
   }
-  main #view-1 #view-1-buttons {
+  main #view-1 #view-1-top #view-1-buttons {
     flex-direction: row;
     justify-content: center;
   }
-  main #view-1 #view-1-buttons #view-1-buttons-btn1,
-  main #view-1 #view-1-buttons #view-1-buttons-btn2 {
+  main #view-1 #view-1-top #view-1-buttons #view-1-buttons-btn1,
+  main #view-1 #view-1-top #view-1-buttons #view-1-buttons-btn2 {
     flex-grow: 0;
     padding: 0.05rem 2rem;
   }
-  main #view-1 #view-1-buttons #view-1-buttons-btn1 > span,
-  main #view-1 #view-1-buttons #view-1-buttons-btn2 > span {
+  main #view-1 #view-1-top #view-1-buttons #view-1-buttons-btn1 > span,
+  main #view-1 #view-1-top #view-1-buttons #view-1-buttons-btn2 > span {
     font-size: 1rem;
   }
-  main #view-1 > video {
+  main #view-1 #view-1-bottom {
+    width: 800px;
+    height: 25rem;
+    position: relative;
+    overflow: visible;
+  }
+  main #view-1 #view-1-bottom #video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  main #view-1 #view-1-bottom #video-container > video {
     max-width: 600px;
+    border-radius: 15px;
+  }
+  main #view-1 #view-1-bottom #video-container #overlay {
+    width: 600px;
+    margin: auto;
+    border-radius: 14px;
+  }
+  main #view-1 #view-1-bottom #image-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    transform: translateY(10%);
+  }
+  main #view-1 #view-1-bottom #image-container .left,
+  main #view-1 #view-1-bottom #image-container .right {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 50%;
+  }
+  main #view-1 #view-1-bottom #image-container .left > img,
+  main #view-1 #view-1-bottom #image-container .right > img {
+    width: 13vw;
+    border-radius: 10px;
+  }
+  main #view-1 #view-1-bottom #image-container .right {
+    align-items: flex-end;
   }
   main #view-2 > h2 {
     font-size: 3rem;
@@ -850,11 +950,29 @@ main #view-9 #view-9-footer #footer {
     max-width: 1400px;
     width: 70%;
   }
-  main #view-1 > p {
+  main #view-1 #view-1-top > p {
     font-size: 1.2rem;
   }
-  main #view-1 > video {
+  main #view-1 #view-1-bottom {
+    width: 1200px;
+  }
+  main #view-1 #view-1-bottom #video-container > video {
     max-width: 800px;
+  }
+  main #view-1 #view-1-bottom #video-container #overlay {
+    width: 800px;
+  }
+  main #view-1 #view-1-bottom #image-container {
+    transform: translateY(-16%);
+  }
+  main #view-1 #view-1-bottom #image-container .left, main #view-1 #view-1-bottom #image-container .right {
+    gap: 1.3rem;
+  }
+  main #view-1 #view-1-bottom #image-container .left > img, main #view-1 #view-1-bottom #image-container .right > img {
+    height: 8rem;
+    width: 11rem;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   main #view-2 {
     gap: 2rem;
