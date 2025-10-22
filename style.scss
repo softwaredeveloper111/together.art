@@ -150,39 +150,84 @@ main {
       flex-direction: column;
       gap: 2rem;
       justify-content: center;
+      align-items: center;
 
-      #view-2-cards-card1,
-      #view-2-cards-card2,
-      #view-2-cards-card3 {
-        width: 100%;
-        min-height: 40rem;
+      .view-2-cards-child {
+    
         border-radius: 10px;
-        padding: 2rem;
-        background-image: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c915a4bf7b6f26de86f7ef_pink-Background.webp");
-        background-size: cover;
+        
+
+        > div {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          > h2 {
+            font-size: 1.79rem;
+            font-family: f1;
+            display: flex;
+            gap: 0.4rem;
+            align-items: center;
+          }
+
+          > p {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      #view-2-cards-card1, #view-2-cards-card2,#view-2-cards-card3{
+        width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        overflow: hidden;
+        background-color: #f98bab;
+        background: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c915a4bf7b6f26de86f7ef_pink-Background.webp");
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        aspect-ratio: 3.84 / 6.12;
 
-        > h2 {
-          font-size: 1.79rem;
-          font-family: f1;
-          display: flex;
-          gap: 0.4rem;
+        #image-wrapper {
+          background-image: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c915a4bf7b6f26de86f7ef_pink-Background.webp");
+          background-size: cover;
+          flex-direction: column;
+          justify-content: center;
           align-items: center;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          position: absolute;
+          top: 0%;
+          bottom: 0%;
+          left: 0%;
+          right: 0%;
         }
 
-        > p {
-          font-size: 1.3rem;
+        #card-content {
+          padding: 1.5rem;
+          z-index: 3;
+          grid-column-gap: 0.45rem;
+          grid-row-gap: 0.45rem;
+          pointer-events: none;
+          flex-direction: column;
+          justify-content: flex-end;
+          padding: 2rem;
+          line-height: 1.4;
+          display: flex;
+          position: relative;
         }
       }
 
       #view-2-cards-card2 {
-        background-image: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c7c1e4d9f74852725ad840_Cards%20%20--lummi.webp");
+        #image-wrapper{
+          background-image: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c7c1e4d9f74852725ad840_Cards%20%20--lummi.webp");
+        }
       }
 
       #view-2-cards-card3 {
-        background-image: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c915a4215b22ddf3222ef2_dude_Background.webp");
+         #image-wrapper{
+          background-image: url("https://cdn.prod.website-files.com/656b54ed82c62b584cca65ee/65c915a4215b22ddf3222ef2_dude_Background.webp");
+        }
       }
     }
   }
@@ -192,6 +237,7 @@ main {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
+    justify-content: center;
 
     > span {
       color: #a035f6;
@@ -353,7 +399,7 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 7rem;
 
     #view-6-top {
       display: flex;
@@ -680,9 +726,6 @@ main {
 
 
 
-
-
-
 @media (min-width: 600px) {
   html {
     font-size: clamp(14px, 1.3vw, 18px);
@@ -724,25 +767,19 @@ main {
       }
 
       #view-2-cards {
-        width: 100%;
         flex-direction: row;
         justify-content: flex-start;
         align-items: stretch;
         gap: 2rem;
 
-        overflow-x: auto; /* ✅ horizontal scroll */
-        scroll-snap-type: x mandatory; /* ✅ smooth snap while scrolling */
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 1rem;
-        ::-webkit-scrollbar {
-          display: none;
-        }
+        overflow-x: auto; 
 
-        #view-2-cards-card1,
-        #view-2-cards-card2,
-        #view-2-cards-card3 {
-          flex: 0 0 80%; /* ✅ each card takes 75% width */
-          scroll-snap-align: center; /* ✅ aligns card nicely while scrolling */
+        padding-bottom: 1rem;
+  
+
+        .view-2-cards-child {
+          flex: 0 0 90%; 
+          scroll-snap-align: center;
           border-radius: 10px;
           max-width: 400px;
           > h2 {
@@ -752,6 +789,10 @@ main {
             font-size: 1rem;
           }
         }
+      }
+
+      #view-2-cards::-webkit-scrollbar{
+        display: none;
       }
     }
 
@@ -843,118 +884,112 @@ main {
     }
 
     #view-7 {
-
-      #view-7-upper{
-
+      #view-7-upper {
         grid-template-columns: 1fr 1fr;
-       grid-template-rows: repeat(9,auto);
+        grid-template-rows: repeat(9, auto);
 
-      grid-template-areas:
-        "one two"
-        "three four"
-        "five five"
-        "six seven"
-        "six eight"
-        "nine eight"
-        "ten eleven"
-        "twelve thirteen"
-        "fourteen fourteen";
+        grid-template-areas:
+          "one two"
+          "three four"
+          "five five"
+          "six seven"
+          "six eight"
+          "nine eight"
+          "ten eleven"
+          "twelve thirteen"
+          "fourteen fourteen";
 
-      .view-7-child {
-        img {
-          height: 9.5rem;
-          width: 9.5rem;
-          object-fit: cover;
-        }
-        >div{
-          >p{
-            font-size: 1.5rem;
+        .view-7-child {
+          img {
+            height: 9.5rem;
+            width: 9.5rem;
+            object-fit: cover;
           }
-        }
-      }
-
-      #view-7-div1 {
-        grid-area: one;
-      }
-      #view-7-div2 {
-        grid-area: two;
-      }
-      #view-7-div3 {
-        grid-area: three;
-      }
-
-      #view-7-div5 {
-        grid-area: four;
-        > div {
-          > p {
-            font-size: 2.6rem;
-            line-height: 1;
-          }
-        }
-      }
-
-      #view-7-div4 {
-        grid-area: five;
-        > div {
-          > p {
-            font-size: 1.8rem;
-          }
-        }
-      }
-
-      #view-7-div6 {
-        grid-area: six;
-      }
-      #view-7-div7 {
-        grid-area: seven;
-      }
-      #view-7-div8 {
-        grid-area: eight;
-      }
-      #view-7-div9 {
-        grid-area: nine;
-          >div{
-          >p{
-            font-size: 1.8rem;
+          > div {
+            > p {
+              font-size: 1.5rem;
+            }
           }
         }
 
-      }
-      #view-7-div10 {
-        grid-area: ten;
-          >div{
-          >p{
-            font-size: 1.8rem;
-          }
+        #view-7-div1 {
+          grid-area: one;
         }
-      }
-      #view-7-div11 {
-        grid-area: eleven;
-      }
-      #view-7-div12 {
-        grid-area: twelve;
-      }
-      #view-7-div13 {
-        grid-area: fourteen;
-          >div{
-          >p{
-            font-size: 1.8rem;
-          }
+        #view-7-div2 {
+          grid-area: two;
         }
-      }
-      #view-7-div14 {
-        grid-area:thirteen;
-        >div{
-          >p{
-            font-size: 1.8rem;
-          }
+        #view-7-div3 {
+          grid-area: three;
         }
-      }
 
+        #view-7-div5 {
+          grid-area: four;
+          > div {
+            > p {
+              font-size: 2.6rem;
+              line-height: 1;
+            }
+          }
+        }
+
+        #view-7-div4 {
+          grid-area: five;
+          > div {
+            > p {
+              font-size: 1.8rem;
+            }
+          }
+        }
+
+        #view-7-div6 {
+          grid-area: six;
+        }
+        #view-7-div7 {
+          grid-area: seven;
+        }
+        #view-7-div8 {
+          grid-area: eight;
+        }
+        #view-7-div9 {
+          grid-area: nine;
+          > div {
+            > p {
+              font-size: 1.8rem;
+            }
+          }
+        }
+        #view-7-div10 {
+          grid-area: ten;
+          > div {
+            > p {
+              font-size: 1.8rem;
+            }
+          }
+        }
+        #view-7-div11 {
+          grid-area: eleven;
+        }
+        #view-7-div12 {
+          grid-area: twelve;
+        }
+        #view-7-div13 {
+          grid-area: fourteen;
+          > div {
+            > p {
+              font-size: 1.8rem;
+            }
+          }
+        }
+        #view-7-div14 {
+          grid-area: thirteen;
+          > div {
+            > p {
+              font-size: 1.8rem;
+            }
+          }
+        }
       }
-      
     }
-
 
     #view-8 {
       #view-8-top {
@@ -987,13 +1022,6 @@ main {
 
 
 
-
-
-
-
-
-
-
 @media (min-width: 1024px) {
   html {
     font-size: clamp(14px, 2vw, 18px);
@@ -1013,29 +1041,27 @@ main {
     }
 
     #view-2 {
-      gap: 0rem;
+      gap: 2rem;
       > h2 {
         font-size: 2.5rem;
-        max-width: 1200px;
+        text-align: center;
       }
 
       #view-2-cards {
-        width: 100%;
-        display: flex;
-        justify-content: center; /* ✅ centers all cards together */
-        align-items: stretch;
-        flex-wrap: nowrap;
-        gap: 2rem;
-        overflow: hidden; /* ✅ removes scroll */
-        padding: 2rem 0;
-        max-height: 35rem;
-
-        #view-2-cards-card1,
-        #view-2-cards-card2,
-        #view-2-cards-card3 {
-          flex: 0 0 30%; /* ✅ each card takes 30% of container */
-          background-position: center;
+   
+        .view-2-cards-child{
+          >div{
+            >p{
+             font-size: 1rem;
+            }
+            >h2{
+              font-size: 1.25rem;
+            }
+          }
         }
+       
+      
+         
       }
     }
 
@@ -1129,28 +1155,29 @@ main {
       #view-7-upper {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat((6, auto));
-        grid-template-areas: "one two three"
-                             "four four five"
-                             "six seven eight"
-                             "six nine eight"
-                             "ten eleven twelve"
-                             "thirteen thirteen fourteen";
+        grid-template-areas:
+          "one two three"
+          "four four five"
+          "six seven eight"
+          "six nine eight"
+          "ten eleven twelve"
+          "thirteen thirteen fourteen";
 
-         .view-7-child{
+        .view-7-child {
           gap: 1rem;
-           > img{
+          > img {
             height: 8rem;
             width: 8rem;
-           }
-           >div{
-            >p{
+          }
+          > div {
+            > p {
               font-size: 1rem;
             }
-            >span{
-              font-size: .7rem;
+            > span {
+              font-size: 0.7rem;
             }
-           }
-         }                     
+          }
+        }
 
         #view-7-div1 {
           grid-area: one;
@@ -1159,27 +1186,26 @@ main {
           grid-area: two;
         }
         #view-7-div3 {
-         grid-area: three;
+          grid-area: three;
         }
 
         #view-7-div4 {
-         grid-area: four;
-         >div{
-           >p{
-            font-size: 1.2rem;
-           }
-         
-         }
+          grid-area: four;
+          > div {
+            > p {
+              font-size: 1.2rem;
+            }
+          }
         }
 
         #view-7-div5 {
-           grid-area: five;
-           >div{
-            >p{
+          grid-area: five;
+          > div {
+            > p {
               font-size: 1.7rem;
               line-height: 1.3;
             }
-           }
+          }
         }
 
         #view-7-div6 {
@@ -1188,7 +1214,6 @@ main {
 
         #view-7-div7 {
           grid-area: seven;
-          
         }
 
         #view-7-div8 {
@@ -1197,24 +1222,24 @@ main {
 
         #view-7-div9 {
           grid-area: nine;
-          >div{
-            >p{
+          > div {
+            > p {
               font-size: 1.2rem;
             }
           }
         }
 
         #view-7-div10 {
-         grid-area: ten;
-          >div{
-            >p{
+          grid-area: ten;
+          > div {
+            > p {
               font-size: 1.2rem;
             }
           }
         }
 
         #view-7-div11 {
-           grid-area: eleven;
+          grid-area: eleven;
         }
 
         #view-7-div12 {
@@ -1222,42 +1247,35 @@ main {
         }
 
         #view-7-div13 {
-         grid-area: thirteen;
-          >div{
-            >p{
+          grid-area: thirteen;
+          > div {
+            > p {
               font-size: 1.2rem;
             }
           }
         }
 
         #view-7-div14 {
-         grid-area: fourteen;
-          >div{
-            >p{
+          grid-area: fourteen;
+          > div {
+            > p {
               font-size: 1.2rem;
             }
           }
         }
-
-
       }
 
-      #view-7-lower{
-         .view-7-lower-icons{
-          >img{
+      #view-7-lower {
+        .view-7-lower-icons {
+          > img {
             width: 1.65rem;
           }
-          >span{
-            font-size: .8rem;
+          > span {
+            font-size: 0.8rem;
           }
-         }
+        }
       }
-
-
-
     }
-
-
 
     #view-8 {
       #view-8-top {
