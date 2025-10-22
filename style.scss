@@ -1027,7 +1027,7 @@ main {
     font-size: clamp(14px, 2vw, 18px);
   }
   main {
-    max-width: 1990px;
+    max-width: 1400px;
     width: 70%;
 
     #view-1 {
@@ -1044,7 +1044,6 @@ main {
       gap: 2rem;
       > h2 {
         font-size: 2.5rem;
-        text-align: center;
       }
 
       #view-2-cards {
@@ -1073,7 +1072,6 @@ main {
     }
 
     #view-4 {
-      max-width: 1300px;
       margin: auto;
       flex-direction: row;
 

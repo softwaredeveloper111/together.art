@@ -847,7 +847,7 @@ main #view-9 #view-9-footer #footer {
     font-size: clamp(14px, 2vw, 18px);
   }
   main {
-    max-width: 1990px;
+    max-width: 1400px;
     width: 70%;
   }
   main #view-1 > p {
@@ -861,7 +861,6 @@ main #view-9 #view-9-footer #footer {
   }
   main #view-2 > h2 {
     font-size: 2.5rem;
-    text-align: center;
   }
   main #view-2 #view-2-cards {
     justify-content: center;
@@ -876,7 +875,6 @@ main #view-9 #view-9-footer #footer {
     max-width: 900px;
   }
   main #view-4 {
-    max-width: 1300px;
     margin: auto;
     flex-direction: row;
   }
